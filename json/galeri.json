@@ -1,11 +1,12 @@
 [
-  {"name":"king","miniature":"galeri/rjhjkm.jpg","fulldrawing":"galeri/rjhjkm.jpg" },
-  {"name":"queen","miniature":"galeri/lfvf.jpg","fulldrawing":"galeri/lfvf.jpg"},
-  {"name":"bishop","miniature":"galeri/jabwt.jpg","fulldrawing":"galeri/jabwt.jpg"},
-  {"name":"knight","miniature":"galeri/rjym.jpg","fulldrawing":"galeri/rjym.jpg"},
-  {"name":"castle","miniature":"galeri/Kflmz.jpg","fulldrawing":"galeri/Kflmz.jpg"},
-  {"name":"pawn","miniature":"galeri/gtirf.jpg","fulldrawing":"galeri/gtirf.jpg"},
-  {"name":"chessboard","miniature":"galeri/219460205.jpg","fulldrawing":"galeri/219460205.jpg"}
+  {"name":"king","miniature":"galeri/jhjkm.jpg","fulldrawing":"galeri/jhjkm.jpg" },
+  {"name":"queen","miniature":"galeri/fvf.jpg","fulldrawing":"galeri/fvf.jpg"},
+  {"name":"bishop","miniature":"galeri/abwt.jpg","fulldrawing":"galeri/abwt.jpg"},
+  {"name":"knight","miniature":"galeri/jym.jpg","fulldrawing":"galeri/jym.jpg"},
+  {"name":"castle","miniature":"galeri/flmz.jpg","fulldrawing":"galeri/flmz.jpg"},
+  {"name":"pawn","miniature":"galeri/tirf.jpg","fulldrawing":"galeri/tirf.jpg"},
+  {"name":"chessboard","miniature":"galeri/19460205.jpg","fulldrawing":"galeri/19460205.jpg"}
 
 
 ]
+

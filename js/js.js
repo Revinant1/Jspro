@@ -279,3 +279,4 @@ function handleGetGaleri() {
     event.stopImmediatePropagation();
 }
 
+
