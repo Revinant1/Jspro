@@ -1,0 +1,22 @@
+*{
+    margin: 0 auto;
+    list-style-type:none;
+    padding: 0;
+}
+.menu-test {
+    display: flex;
+    margin-top: 50px;
+    width: 950px;
+    height: 310px;
+}
+.miniature{
+    width: 125px;
+    height: 170px;
+    padding: 0 20px 0 20px;
+}
+.fulldrawing{
+    display: none;
+    width: 500px;
+    height: 500px;
+    background-color: darkgrey;
+}
