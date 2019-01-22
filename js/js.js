@@ -112,7 +112,7 @@ MenuItem.prototype.render = function() {
     var container = Container.prototype.render.call(this);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://127.0.0.1:8080/package.json");
+    xhr.open("GET", "http://127.0.0.1:8080/json/women.json");
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -140,7 +140,7 @@ MenuItem1.prototype.render = function() {
     var container = Container.prototype.render.call(this);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://127.0.0.1:8080/accessories.json");
+    xhr.open("GET", "http://127.0.0.1:8080/json/accessories.json");
     xhr.send();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
@@ -208,7 +208,7 @@ $menuSub.appendChild(menu2.render());
 var button = document.getElementById("send");
 
 var xhr = new XMLHttpRequest();
-xhr.open("GET", "http://127.0.0.1:8080/json/galeri.json");
+xhr.open("GET", "http://127.0.0.1:8080/../json/galeri.json");
 xhr.send();
 xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE) {

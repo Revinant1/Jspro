@@ -1,11 +1,11 @@
 [
-  {"name":"king","miniature":"img/depositphotos_2617036-stock-photo-chess-queen.jpg","fulldrawing":"img/depositphotos_2617036-stock-photo-chess-queen.jpg" },
-  {"name":"queen","miniature":"img/1347118835_korol.jpg","fulldrawing":"img/1347118835_korol.jpg"},
-  {"name":"bishop","miniature":"img/4b531c3f6e27.jpg","fulldrawing":"img/4b531c3f6e27.jpg"},
-  {"name":"knight","miniature":"img/ede7b891110d4f5047de4704e10d356e--horse-logo-chess-pieces.jpg","fulldrawing":"img/ede7b891110d4f5047de4704e10d356e--horse-logo-chess-pieces.jpg"},
-  {"name":"castle","miniature":"img/ab737f7fd63dfc076357069044f18bc0.jpg","fulldrawing":"img/ab737f7fd63dfc076357069044f18bc0.jpg"},
-  {"name":"pawn","miniature":"img/5853783.jpg","fulldrawing":"img/5853783.jpg"},
-  {"name":"chessboard","miniature":"img/9ef4dadf3a5e0b4d8fbf8a75f375bb15.jpg","fulldrawing":"img/9ef4dadf3a5e0b4d8fbf8a75f375bb15.jpg"}
+  {"name":"king","miniature":"galeri/rjhjkm.jpg","fulldrawing":"galeri/rjhjkm.jpg" },
+  {"name":"queen","miniature":"galeri/lfvf.jpg","fulldrawing":"galeri/lfvf.jpg"},
+  {"name":"bishop","miniature":"galeri/jabwt.jpg","fulldrawing":"galeri/jabwt.jpg"},
+  {"name":"knight","miniature":"galeri/rjym.jpg","fulldrawing":"galeri/rjym.jpg"},
+  {"name":"castle","miniature":"galeri/Kflmz.jpg","fulldrawing":"galeri/Kflmz.jpg"},
+  {"name":"pawn","miniature":"galeri/gtirf.jpg","fulldrawing":"galeri/gtirf.jpg"},
+  {"name":"chessboard","miniature":"galeri/219460205.jpg","fulldrawing":"galeri/219460205.jpg"}
 
 
 ]
