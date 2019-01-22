@@ -205,7 +205,7 @@ $menuSub.appendChild(menu1.render());
 $menuSub.appendChild(menu2.render());
 
 
-var button = document.getElementById("send");
+
 
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://127.0.0.1:8080/../json/galeri.json");
@@ -237,6 +237,7 @@ xhr.onreadystatechange = function () {
 
             function handleOpenModal(event) {
                 modalImg.style.display = "flex";
+                event.stopImmediatePropagation();
 
             }
             function handleClostModal(event) {
@@ -253,3 +254,28 @@ xhr.onreadystatechange = function () {
 
 
 }
+
+var button = document.getElementById("success");
+button = addEventListener("click",handleGetGaleri);
+function handleGetGaleri() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://127.0.0.1:8080/json/success.json");
+    xhr.send();
+    xhr.onreadystatechange = function () {
+            var response = JSON.parse('{"result":"success"}',function (key,vual) {
+                var a = document.getElementById("success");
+                if (vual.result === "success") {
+                    a.innerHTML = "Успех";
+                    a.style.backgroundColor = "green";
+                } else {
+                    a.innerHTML = "Ошибка";
+                    a.style.backgroundColor = "red";
+                }
+                return vual;
+            });
+
+
+        }
+    event.stopImmediatePropagation();
+}
+
