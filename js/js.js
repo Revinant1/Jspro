@@ -44,7 +44,7 @@ Container.prototype.remove = function() {
 }
 
 function Menu(id, className, items) {
-    Container.call(this, id, className, 'dul');
+    Container.call(this, id, className, 'div');
 
     // protected
     this._items = items;
@@ -57,6 +57,7 @@ Menu.prototype.render = function() {
     this._items.forEach(function(item) {
         if(item instanceof Container) {
             container.appendChild(item.render());
+
         }
     });
 
@@ -106,10 +107,11 @@ function MenuItem(className, link, title) {
 }
 
 
-MenuItem.prototype = Object.create(Container.prototype);
-MenuItem.prototype.render = function() {
+MenuItem1.prototype = Object.create(Container.prototype);
+MenuItem1.prototype.render = function() {
 
     var container = Container.prototype.render.call(this);
+
 
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "http://127.0.0.1:8080/json/women.json");
@@ -117,25 +119,26 @@ MenuItem.prototype.render = function() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             var menuName = JSON.parse(xhr.responseText);
-
-            menuName.forEach(function (punkt) {
-                var div = document.createElement("div");
+            var div = document.createElement("div");
+            menuName.forEach(function (name) {
                 var li = document.createElement("li");
                 var  a = document.createElement("a");
-                a.textContent = punkt.punktTitle;
-                a.href = punkt.link;
+                a.textContent = name.title;
+                a.href = name.link;
                 console.log(a.textContent);
+                div.appendChild(li);
                 li.appendChild(a);
-                container.appendChild(li);
+                container.appendChild(div);
             })
+
 
         }
 
     }
     return container;
 }
-MenuItem1.prototype = Object.create(Container.prototype);
-MenuItem1.prototype.render = function() {
+MenuItem2.prototype = Object.create(Container.prototype);
+MenuItem2.prototype.render = function() {
 
     var container = Container.prototype.render.call(this);
 
@@ -146,12 +149,49 @@ MenuItem1.prototype.render = function() {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             var menuName = JSON.parse(xhr.responseText);
 
-            menuName.forEach(function (punkt) {
+            menuName.forEach(function (name) {
                 var li = document.createElement("li");
                 var  a = document.createElement("a");
-                a.textContent = punkt.punktTitle;
-                a.href = punkt.link;
+                a.textContent = name.title;
+                a.href = name.link;
                 console.log(a.textContent);
+                li.appendChild(a);
+                container.appendChild(li);
+            })
+
+        }
+
+    };
+    return container;
+};
+MenuItem.prototype = Object.create(Container.prototype);
+MenuItem.prototype.render = function() {
+
+    var container = Container.prototype.render.call(this);
+
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://127.0.0.1:8080/json/mega-menulist.json");
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            var menuName = JSON.parse(xhr.responseText);
+
+            menuName.forEach(function (name) {
+
+                var div = document.createElement("div");
+                div.className = "mega-dropmenu";
+
+                var li = document.createElement("li");
+                li.id = name.id;
+                li.className = name.classNameLi;
+
+                var  a = document.createElement("a");
+                a.className = name.classNameLink;
+                a.textContent = name.title;
+                a.href = name.link;
+                console.log(a.textContent);
+                li.appendChild(div);
                 li.appendChild(a);
                 container.appendChild(li);
             })
@@ -182,27 +222,31 @@ SuperMenu.prototype.render = function() {
         var Item1 = new MenuItem1('item', this.link, this.title).render();
         var Item = new MenuItem('item', this.link, this.title).render();
         var menu = Menu.prototype.render.call(this);
+        Item2.appendChild(menu);
         Item1.appendChild(menu);
         Item.appendChild(menu);
 
 
-        return Item , Item1;
+        return Item , Item1, Item2;
     }else{
         return Menu.prototype.render.call(this);
     }
 }
 
 
-var menuItem1 = new MenuItem('menu-item', '/', '');
-var menu1 = new SuperMenu('menu1', 'menu', [menuItem1]);
+var menuItem3 = new MenuItem2('mega-menutext', '/', '');
+var menu3 = new SuperMenu('menu3', 'mega-menutext', [menuItem3]);
 
-var menuItem2 = new MenuItem1('menu-item', '/', '');
-var menu2 = new SuperMenu('menu1', 'menu', [menuItem2]);
+var menuItem2 = new MenuItem1('mega-menutext', '/', '');
+var menu2 = new SuperMenu('menu2', 'mega-menutext', [menuItem2]);
 
+var menuItem1 = new MenuItem('navigation', '', '',);
+var menu1 = new SuperMenu("navigation-wrap", "navigation", [menuItem1]);
 
 var $menuSub = document.getElementById("wrap_menu");
 $menuSub.appendChild(menu1.render());
 $menuSub.appendChild(menu2.render());
+$menuSub.appendChild(menu3.render());
 
 
 
@@ -211,19 +255,24 @@ var xhr = new XMLHttpRequest();
 xhr.open("GET", "http://127.0.0.1:8080/../json/galeri.json");
 xhr.send();
 xhr.onreadystatechange = function () {
+
     if (xhr.readyState === XMLHttpRequest.DONE) {
+
         var imageName = JSON.parse(xhr.responseText);
 
         var div = document.createElement("div");
         div.className = "galeri";
         imageName.forEach(function (name) {
+
             var span = document.createElement("span");
             span.className = name.name;
             span.textContent = name.name;
+
             var img = document.createElement("img");
             img.src = name.miniature;
             img.className = "miniature";
             img.addEventListener("click", handleOpenModal);
+
             var modalImg = document.createElement("img");
             modalImg.src = name.fulldrawing;
             modalImg.className = "fulldrawing";
@@ -257,12 +306,13 @@ xhr.onreadystatechange = function () {
 
 var button = document.getElementById("success");
 button = addEventListener("click",handleGetGaleri);
-function handleGetGaleri() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://127.0.0.1:8080/json/success.json");
-    xhr.send();
-    xhr.onreadystatechange = function () {
-            var response = JSON.parse('{"result":"success"}',function (key,vual) {
+function handleGetGaleri(event) {
+    if (event.target.id === "success") {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "http://127.0.0.1:8080/json/success.json");
+        xhr.send();
+        xhr.onreadystatechange = function () {
+            var response = JSON.parse('{"result":"success"}', function (key, vual) {
                 var a = document.getElementById("success");
                 if (vual.result === "success") {
                     a.innerHTML = "Успех";
@@ -276,7 +326,8 @@ function handleGetGaleri() {
 
 
         }
-    event.stopImmediatePropagation();
+
+    }
 }
 
 
