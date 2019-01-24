@@ -1,0 +1,44 @@
+
+*{
+    margin: 0 auto;
+}
+.form-wrap{
+    margin-top: 40px;
+    width: 600px;
+    height: 400px;
+}
+.phonegreen{
+    border: green 2px solid;
+    color: green;
+}
+
+.phonered{
+    border: red 2px solid;
+}
+.mail-wrap{
+    height: 70px;
+}
+.mailgreen{
+    border: green 2px solid;
+    color: green;
+}
+.mailred{
+    border: red 2px solid;
+    color: red;
+}
+.text{
+    display: flex;
+}
+.text button{
+    margin-left: 10px;
+}
+.button-wrap{
+    padding: 30px;
+    text-align: center;
+    width: 250px;
+    height: 150px;
+    display: flex;
+}
+.button-wrap button{
+    height: 40px;
+}
