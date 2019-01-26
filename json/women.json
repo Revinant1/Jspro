@@ -1,13 +1,13 @@
 [
-  {"punktTitle":"WOMEN","link":"/index.html"},
-  {"punktTitle":"Dresses","link":"/index.html"},
-  {"punktTitle":"Tops","link":"/index.html"},
-  {"punktTitle":"Sweaters/Knits","link":"/index.html"},
-  {"punktTitle":"Jackets/Coats","link":"/index.html"},
-  {"punktTitle":"Blazers","link":"/index.html"},
-  {"punktTitle":"Denim","link":"/index.html"},
-  {"punktTitle":"Leggings/title","link":"/index.html"},
-  {"punktTitle":"Skirts/Shorts","link":"/index.html"}
+  {"id":"women-menulist-last", "classNameli":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Women"},
+  {"id":"women-menulist-last1", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Dresses"},
+  {"id":"women-menulist-last2", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Tops"},
+  {"id":"women-menulist-last3", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Sweaters/Knits"},
+  {"id":"women-menulist-last4", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Jackets/Coats"},
+  {"id":"women-menulist-last5", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Blazers"},
+  {"id":"women-menulist-last6", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Denim"},
+  {"id":"women-menulist-last7", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Leggings/Pants"},
+  {"id":"women-menulist-last8", "className":"women-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Skirts/Shorts"}
 
 
 ]

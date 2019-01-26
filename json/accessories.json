@@ -1,10 +1,9 @@
 
 [
-  {"punktTitle":"Accessories","link":"/index.html"},
-  {"punktTitle":"Bags/Purses","link":"/index.html"},
-  {"punktTitle":"Swimwear/Underwear","link":"/index.html"},
-  {"punktTitle":"Nightwear","link":"/index.html"}
-
+  {"id":"accessories-menulist-last", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Accessories"},
+  {"id":"accessories-menulist-last1", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Bags/Purses"},
+  {"id":"accessories-menulist-last2", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Swimwear/Underwear"},
+  {"id":"accessories-menulist-last3", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Nightwear"}
 ]
 
 
