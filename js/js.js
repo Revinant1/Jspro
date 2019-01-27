@@ -48,6 +48,7 @@ function Menu(id, className, items) {
 
     // protected
     this._items = items;
+
 }
 
 Menu.prototype = Object.create(Container.prototype);
@@ -82,7 +83,7 @@ function MenuItem3(className, link, title) {
 
 }
 function MenuItem2(className, link, title) {
-    Container.call(this, '', className, "ul");
+    Container.call(this, '', className, "div");
 
 
     this.link = link;
@@ -90,14 +91,14 @@ function MenuItem2(className, link, title) {
 
 }
 function MenuItem1(className, link, title) {
-    Container.call(this, '', className, "ul");
+    Container.call(this, '', className, "div");
 
 
     this.link = link;
     this.title = title;
 
 }
-function MenuItem(className, link, title) {
+function MenuItem(id, className, link, title) {
     Container.call(this, '', className, "ul");
 
 
@@ -119,7 +120,7 @@ MenuItem1.prototype.render = function() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             var menuName = JSON.parse(xhr.responseText);
-            var div = document.createElement("div");
+            var div = document.createElement("ul");
             menuName.forEach(function (name) {
                 var li = document.createElement("li");
                 var  a = document.createElement("a");
@@ -148,15 +149,88 @@ MenuItem2.prototype.render = function() {
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
             var menuName = JSON.parse(xhr.responseText);
-
+            var ul = document.createElement("ul");
+            var ul1 = document.createElement("ul");
             menuName.forEach(function (name) {
+
+                if(name.classNameli === "kids-menulist-last"){
+
+                    var li1 = document.createElement("li");
+                    var  a1 = document.createElement("a");
+                    a1.textContent = name.title;
+                    a1.href = name.link;
+                    ul1.appendChild(li1);
+                    li1.appendChild(a1);
+                    container.appendChild(ul1);
+                    return container;
+                }
+
+
                 var li = document.createElement("li");
                 var  a = document.createElement("a");
                 a.textContent = name.title;
                 a.href = name.link;
-                console.log(a.textContent);
+                ul.appendChild(li);
                 li.appendChild(a);
-                container.appendChild(li);
+                container.appendChild(ul);
+            })
+
+        }
+
+    };
+    return container;
+};
+MenuItem3.prototype = Object.create(Container.prototype);
+MenuItem3.prototype.render = function() {
+
+    var container = Container.prototype.render.call(this);
+
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://127.0.0.1:8080/json/man.json");
+    xhr.send();
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            var menuName = JSON.parse(xhr.responseText);
+            var ul = document.createElement("ul");
+            var ul1 = document.createElement("ul");
+            menuName.forEach(function (name) {
+
+                if(name.classNameli === "discont-menulist-last"){
+
+                    var li1 = document.createElement("li");
+                    var  a1 = document.createElement("a");
+                    a1.textContent = name.title;
+                    a1.href = name.link;
+
+                    var div = document.createElement("div");
+                    var video = document.createElement("video");
+                    video.autoplay = true;
+                    video.loop = true;
+                    var source = document.createElement("source");
+
+                    div.className = name.clssNameDiv;
+                    video.width = name.width;
+                    video.height = name.height;
+                    source.src = name.videoSrc;
+                    source.type = name.type;
+                    ul1.appendChild(li1);
+                    li1.appendChild(a1);
+                    a1.appendChild(div);
+                    div.appendChild(video);
+                    video.appendChild(source);
+
+                    container.appendChild(ul1);
+                    return container;
+                }
+
+
+                var li = document.createElement("li");
+                var  a = document.createElement("a");
+                a.textContent = name.title;
+                a.href = name.link;
+                ul.appendChild(li);
+                li.appendChild(a);
+                container.appendChild(ul);
             })
 
         }
@@ -190,7 +264,6 @@ MenuItem.prototype.render = function() {
                 a.className = name.classNameLink;
                 a.textContent = name.title;
                 a.href = name.link;
-                console.log(a.textContent);
                 li.appendChild(div);
                 li.appendChild(a);
                 container.appendChild(li);
@@ -208,7 +281,7 @@ function SuperMenu(id, className, items, link, title) {
     MenuItem3.call(this, 'item', link, title);
     MenuItem2.call(this, 'item', link, title);
     MenuItem1.call(this, 'item', link, title);
-    MenuItem.call(this, 'item', link, title);
+    MenuItem.call(this,  'item', link, title);
     Menu.call(this, id, className, items);
 
 }
@@ -216,37 +289,35 @@ function SuperMenu(id, className, items, link, title) {
 SuperMenu.prototype = Object.create(Menu.prototype);
 SuperMenu.prototype.render = function() {
     if(this.link && this.title) {
-        var Item4 = new MenuItem4('item', this.link, this.title).render();
-        var Item3 = new MenuItem3('item', this.link, this.title).render();
-        var Item2 = new MenuItem2('item', this.link, this.title).render();
-        var Item1 = new MenuItem1('item', this.link, this.title).render();
-        var Item = new MenuItem('item', this.link, this.title).render();
-        var menu = Menu.prototype.render.call(this);
-        Item2.appendChild(menu);
-        Item1.appendChild(menu);
-        Item.appendChild(menu);
+        var Item4 = new MenuItem4(this.link, this.title).render();
+        var Item3 = new MenuItem3(this.link, this.title).render();
+        var Item2 = new MenuItem2(this.link, this.title).render();
+        var Item1 = new MenuItem1(this.link, this.title).render();
+        var Item = new MenuItem1(this.link, this.title).render();
 
-
-        return Item , Item1, Item2;
+        return Item,Item1 ;
     }else{
         return Menu.prototype.render.call(this);
     }
-}
+};
 
+var menuItem3 = new MenuItem3("mega-menutext","/","");
+var menuItem2 = new MenuItem2("mega-menutext","/","");
+var menuItem1 = new MenuItem1("mega-menutext","/","");
 
-var menuItem3 = new MenuItem2('mega-menutext', '/', '');
-var menu3 = new SuperMenu('menu3', 'mega-menutext', [menuItem3]);
-
-var menuItem2 = new MenuItem1('mega-menutext', '/', '');
-var menu2 = new SuperMenu('menu2', 'mega-menutext', [menuItem2]);
-
-var menuItem1 = new MenuItem('navigation', '', '',);
-var menu1 = new SuperMenu("navigation-wrap", "navigation", [menuItem1]);
 
 var $menuSub = document.getElementById("wrap_menu");
-$menuSub.appendChild(menu1.render());
-$menuSub.appendChild(menu2.render());
-$menuSub.appendChild(menu3.render());
+
+
+$menuSub.appendChild(menuItem1.render());
+$menuSub.appendChild(menuItem2.render());
+$menuSub.appendChild(menuItem3.render());
+
+
+
+
+
+
 
 
 
