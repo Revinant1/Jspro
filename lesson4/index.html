@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleslesson4/style.css">
+
+</head>
+<body>
+<div id="wrap_global_form" class="wrap_global_form">
+    <div id="wrap_form" class="wrap_form">
+        <div class="wrap_tab">
+            <span id="authorization_tab" class="tab tab_active">Авторизация</span>
+            <span id="registration_tab" class="tab">Регистрация</span>
+            <span id="registration_conditions_tab" class="tab">Правила</span>
+        </div>
+        <form class="authorization_tab">
+            <input type="text" placeholder="Введите имя:">
+            <input type="password" placeholder="Ведите пфроль:">
+            <div class="radio">
+                <input id="radio_but" type="checkbox">
+                <p class="radio_text">Запомнить меня.</p>
+                <a id="foget" href="#">Забыл пароль</a>
+            </div>
+            <a class="button_herf" href="#" type="button">Войти</a>
+
+            <div class="soc_bloc">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a id="odnoklassniki" href="#"><i class="fab fa-odnoklassniki"></i></a>
+            </div>
+        </form>
+        <form class="registration_tab del">
+            <input id="name" type="text" placeholder="Введите имя:">
+            <div class="city_cheng_wrap">
+                <input id="city" type="text" placeholder="Введите город:">
+                <span id="chenge_city"><i class="fas fa-chevron-down"></i></span>
+                <div id="list_city" class="list_city del "></div>
+            </div>
+            <input id="email" type="email" placeholder="Введите E-mail:">
+            <input id="password" type="password" placeholder="Ведите пфроль:">
+            <a id="reg_button" class="button_herf" href="#" type="sabmite">Регистрация</a>
+            <div class="soc_bloc">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-google"></i></a>
+                <a id="odnoklassniki1" href="#"><i class="fab fa-odnoklassniki"></i></a>
+            </div>
+        </form>
+        <div class="conditions_tab del">
+            <h3>Ознакомтесь с условиями регистрации:</h3><br>
+            <p>Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать
+                несколько абзацев более менее осмысленного текста рыбы на русском языке
+                , а начинающему оратору отточить навык публичных выступлений в
+                домашних условиях. При создании генератора мы использовали небезизвестный
+                универсальный код речей. Текст генерируется абзацами случайным образом от
+                двух до десяти предложений в абзаце, что позволяет сделать текст более
+                привлекательным и живым для визуально-слухового восприятия.</p><br>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="jslesson4/js4.js"></script>
+</body>
+</html>
