@@ -3,7 +3,11 @@
   {"id":"accessories-menulist-last", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Accessories"},
   {"id":"accessories-menulist-last1", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Bags/Purses"},
   {"id":"accessories-menulist-last2", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Swimwear/Underwear"},
-  {"id":"accessories-menulist-last3", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Nightwear"}
+  {"id":"accessories-menulist-last3", "classNameli":"accessories-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Nightwear"},
+  {"id":"kids-menulist-last", "classNameli":"kids-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Kids"},
+  {"id":"kids-menulist-last1", "classNameli":"kids-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Beauty"},
+  {"id":"kids-menulist-last2", "classNameli":"kids-menulist-last","classNameLink":"mega-menulist-link", "link":"index.html", "title":"Dresses"}
+
 ]
 
 

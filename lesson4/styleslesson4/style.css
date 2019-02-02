@@ -1,0 +1,171 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+
+}
+.wrap_global_form{
+    padding-top: 120px;
+    margin-top: 60px;
+    width: 940px;
+    height: 475px;
+    background-image: url("../img/depo1.jpg");
+}
+.wrap_form{
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    width: 350px;
+}
+.wrap_tab{
+    display: flex;
+    margin: 0;
+    width: 337px;
+}
+.wrap_tab span{
+    padding: 5px;
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: -1px;
+    cursor: pointer;
+}
+.tab.tab_active{
+    background: white;
+    color: #074877;
+    font-size: larger;
+}
+.authorization_tab, .registration_tab, .conditions_tab{
+    display: flex;
+    flex-direction: column;
+}
+.authorization_tab a, .registration_tab a{
+    color: #074877;
+    font-weight: 700;
+    font-size: 18px;
+}
+.authorization_tab input, .registration_tab input{
+    display: block;
+    width: 250px;
+    height: 40px;
+    margin: 25px 42px 0;
+    padding-left: 10px;
+}
+
+.radio{
+    display: flex;
+    padding: 0;
+    margin: 10px 0 10px;
+}
+.button_herf {
+    border: #ffffff solid 1px;
+    padding: 10px 73px;
+    border-radius: 5px;
+    background: #ffffffbd;
+
+}
+#reg_button{
+    margin-top: 25px;
+}
+#radio_but{
+    width: 15px;
+    margin: -10px 0 0 43px;
+}
+.radio_text{
+    margin: 1px 5px 0 5px;
+}
+#foget{
+    margin: 3px 24px;
+    font-size: 14px;
+    color: #671111a6;
+}
+.soc_bloc{
+    display: flex;
+    padding: 0;
+    margin: 29px 34px;
+}
+.soc_bloc a{
+    border: #074877 solid 1px;
+    background: #fff;
+    padding: 10px 10px 8px;
+    border-radius: 5px;
+}
+#odnoklassniki{
+    padding: 10px 13px 8px;
+}
+#odnoklassniki1{
+    padding: 10px 13px 8px;
+}
+.conditions_tab{
+    background: #faebd766;
+    padding: 20px;
+    width: 300px;
+
+}
+.city_cheng_wrap{
+    display: flex;
+}
+#name{
+    position: relative;
+}
+#city{
+    position: relative;
+    margin: 25px 0 0 0;
+    width: 210px;
+}
+#chenge_city{
+    background: #fff;
+    margin: 26px 0px 0px 0px;
+    height: 43px;
+    width: 40px;
+    box-sizing: border-box;
+    padding: 11px;
+    font-weight: 900;
+    font-size: 22px;
+    color: #074877
+}
+.list_city{
+    position: absolute;
+    z-index: 2;
+    height: 218px;
+    width: 265px;
+    top: 358px;
+    left: 820px;
+    background: #fff;
+    overflow-y: scroll;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
+    border: #074877 1px solid;
+}
+.list_city p {
+    cursor: pointer;
+    background-color: #f7ffff;
+}
+.autocomplete_items {
+    position: absolute;
+    z-index: 2;
+    height: 230px;
+    width: 262px;
+    overflow-y: scroll;
+    left: 820px;
+    top: 290px;
+    background: #fff;
+    border-radius: 0 0 10px 10px;
+    border: #074877 1px solid;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.autocomplete_items div {
+    padding: 3px;
+    cursor: pointer;
+    background-color: #f7ffff;
+
+
+}
+
+.del{
+    display: none;
+}
+
+
