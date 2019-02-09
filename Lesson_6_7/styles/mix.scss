@@ -1,0 +1,11 @@
+//Переменные
+$col: #206abb;
+
+
+//Миксины
+@mixin push--auto {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
